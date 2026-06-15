@@ -78,14 +78,14 @@ export default function ContactClient() {
                     <div className={`w-16 h-16 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-6 shadow-sm`}>
                       <item.icon size={32} strokeWidth={2.5} />
                     </div>
-                    <div className="flex-grow">
+                    <div className="flex-grow min-w-0">
                       <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-1">{item.title}</h4>
                       {item.link ? (
-                        <a href={item.link} target="_blank" className="text-xl font-black text-slate-900 no-underline hover:text-primary transition-colors flex items-center justify-between uppercase tracking-tighter">
-                           {item.detail} <ChevronRight size={20} className="text-slate-200 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                        <a href={item.link} target="_blank" className="text-sm md:text-base lg:text-lg xl:text-xl font-black text-slate-900 no-underline hover:text-primary transition-colors flex items-center justify-between uppercase tracking-tighter break-words">
+                           <span className="truncate lg:whitespace-normal">{item.detail}</span> <ChevronRight size={20} className="text-slate-200 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </a>
                       ) : (
-                        <p className="text-xl font-black text-slate-900 mb-0 uppercase tracking-tighter">{item.detail}</p>
+                        <p className="text-sm md:text-base lg:text-lg xl:text-xl font-black text-slate-900 mb-0 uppercase tracking-tighter break-words">{item.detail}</p>
                       )}
                       <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">{item.sub}</p>
                     </div>
