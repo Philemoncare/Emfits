@@ -57,7 +57,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Phreshy Dishwashing Liquid",
-    price: 15.0,
+    price: 25.0,
     image: "/images/photo_2026-06-15_09-29-02.jpg",
     category: "Liquid Detergents",
     description: "Rapid grease-cutting technology for spotlessly clean dishes. Gentle on skin, tough on oil.",
