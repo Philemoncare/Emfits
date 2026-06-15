@@ -22,11 +22,21 @@ const BottomNav = () => {
     { label: "Contact", href: "/contact", icon: Phone },
   ];
 
-  // Helper to check if a route is active
+  // Helper to check if a route is active with precise matching
   const isRouteActive = (href: string) => {
     if (href === "#search") return false;
+
+    // Exact match for home
     if (href === "/") return pathname === "/";
-    return pathname.startsWith(href) || pathname.startsWith("/product/"); // Also highlight Shop for single product pages
+
+    // Match shop for both listing and single product pages
+    if (href === "/products") {
+      return pathname.startsWith("/products") || pathname.startsWith("/product/");
+    }
+
+    // For other pages, check if current path starts with the link href
+    // This handles nested routes if any exist, while avoiding "/" matching everything
+    return pathname === href || (href !== "/" && pathname.startsWith(href + "/"));
   };
 
   return (
@@ -48,41 +58,39 @@ const BottomNav = () => {
                   setActiveTab(item.href);
                   router.push(item.href);
                 }}
-                className="relative flex flex-col items-center justify-center flex-1 py-1 transition-all active:scale-90 outline-none"
+                className="relative flex flex-col items-center justify-center flex-1 py-2 transition-all active:scale-95 outline-none group"
               >
-                {/* Active Indicator Glow */}
+                {/* Modern Pill Indicator */}
                 <div
-                  className={`absolute inset-0 m-auto w-12 h-12 rounded-2xl transition-all duration-500 ease-out ${
+                  className={`absolute inset-x-1 top-1 bottom-1 rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
                     isActive
                       ? 'bg-primary/10 dark:bg-primary/20 opacity-100 scale-100'
-                      : 'bg-transparent opacity-0 scale-50'
+                      : 'bg-transparent opacity-0 scale-75'
                   }`}
                 />
 
-                {/* Icon Container */}
-                <div className={`relative z-10 transition-all duration-300 ${isActive ? 'scale-110 -translate-y-1' : ''}`}>
+                {/* Icon & Label Container */}
+                <div className={`relative z-10 flex flex-col items-center transition-all duration-500 ${isActive ? '-translate-y-0.5' : ''}`}>
                   <item.icon
-                    size={22}
-                    strokeWidth={isActive ? 2.5 : 2}
-                    className={`transition-colors duration-300 ${
+                    size={20}
+                    strokeWidth={isActive ? 3 : 2}
+                    className={`transition-all duration-300 ${
                       isActive ? 'text-primary' : 'text-slate-400 dark:text-slate-500'
                     }`}
                   />
 
-                  {/* Floating Dot Indicator */}
-                  {isActive && (
-                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(14,165,233,0.8)]" />
-                  )}
-                </div>
+                  {/* Label */}
+                  <span
+                    className={`text-[8px] font-black uppercase tracking-[0.2em] mt-1.5 transition-all duration-300 ${
+                      isActive ? 'text-primary opacity-100' : 'text-slate-400 dark:text-slate-500 opacity-60'
+                    }`}
+                  >
+                    {item.label}
+                  </span>
 
-                {/* Label */}
-                <span
-                  className={`text-[9px] font-black uppercase tracking-[0.1em] mt-1.5 transition-all duration-300 z-10 ${
-                    isActive ? 'text-primary opacity-100' : 'text-slate-400 dark:text-slate-500 opacity-70'
-                  }`}
-                >
-                  {item.label}
-                </span>
+                  {/* Modern Active Dot */}
+                  <div className={`mt-1 h-1 rounded-full bg-primary transition-all duration-500 shadow-[0_0_10px_rgba(14,165,233,0.5)] ${isActive ? 'w-4' : 'w-0'}`} />
+                </div>
               </button>
             );
           })}

@@ -172,19 +172,11 @@ export const performSearch = (query: string, category: string = "All Categories"
     }))
     .filter(res => res.score > 0);
 
-  // 2. Search in static content
+  // 2. Search in static content (Disabled to show products alone)
   let staticResults: SearchResult[] = [];
-  if (isAll) {
-    staticResults = staticContent
-      .map(item => ({
-        ...item,
-        score: getScore(item)
-      }))
-      .filter(res => res.score > 0);
-  }
 
   // Combine, sort by score, and limit
-  return [...productResults, ...staticResults]
+  return productResults
     .sort((a, b) => (b as any).score - (a as any).score)
     .slice(0, 10); // Slightly more results for "modern" feel
 };
