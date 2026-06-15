@@ -21,7 +21,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Phreshy Washing Powder",
-    price: 35.0,
+    price: 20.0,
     image: "/images/photo_2026-06-15_09-28-45.jpg",
     category: "Washing Powders",
     description: "Scientific deep-fiber cleaning powder that eliminates tough grime while whitening whites.",
