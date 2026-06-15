@@ -1,6 +1,12 @@
 import PageHeader from "@/components/shared/PageHeader";
 import { ShieldCheck, Truck, Users, ArrowRight, CheckCircle2, Zap, Target, Heart } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Our Mission & Excellence",
+  description: "Redefining hygiene standards across West Africa through scientific innovation and local excellence. Learn about Emfits Enterprise foundations.",
+};
 
 export default function AboutPage() {
   return (

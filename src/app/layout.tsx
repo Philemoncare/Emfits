@@ -8,11 +8,57 @@ import CookieConsent from "@/components/layout/CookieConsent";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 
 export const metadata: Metadata = {
-  title: "Emfits Enterprise | Cleaning Detergents Ghana",
+  metadataBase: new URL('https://emfits.com'), // Replace with your actual domain when live
+  title: {
+    default: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    template: "%s | Emfits Enterprise"
+  },
   description: "Experience the ultimate clean with Emfits Enterprise. High-performance detergents, fabric softeners, and home care solutions delivered across Ghana.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0", // Critical for app-feel
+  keywords: ["cleaning detergents Ghana", "laundry soap", "fabric softener Ghana", "Emfits Enterprise", "industrial cleaning supplies", "buy detergents Accra"],
+  authors: [{ name: "Emfits Team" }],
+  creator: "Emfits Enterprise",
+  publisher: "Emfits Enterprise",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GH",
+    url: "https://emfits.com",
+    siteName: "Emfits Enterprise",
+    title: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    description: "High-performance cleaning solutions delivered across Ghana. Experience the ultimate clean.",
+    images: [{
+      url: "/images/logo.png", // Using existing logo as fallback OG image
+      width: 800,
+      height: 800,
+      alt: "Emfits Enterprise Logo"
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    description: "High-performance cleaning solutions delivered across Ghana.",
+    images: ["/images/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
   icons: {
     icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
