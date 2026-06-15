@@ -39,7 +39,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Phreshy Floor Cleaner",
-    price: 22.0,
+    price: 100.0,
     image: "/images/gallon.png",
     category: "Surface Care",
     description: "Sparkling clean floors with a long-lasting fresh fragrance. Ideal for all types of floors.",
