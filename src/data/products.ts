@@ -48,7 +48,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Phreshy Disinfectant",
-    price: 20.0,
+    price: 25.0,
     image: "/images/ged.png",
     category: "Surface Care",
     description: "Eliminates 99.9% of germs and household bacteria with a long-lasting forest pine aroma.",
