@@ -165,7 +165,7 @@ const Navbar = () => {
             {/* Menu Button (Three Dot Lines) */}
             {!isSearchActive && (
               <button
-                className="w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-white hover:bg-primary active:scale-90 transition-all shadow-lg border-2 border-slate-800 flex-shrink-0"
+                className="xl:hidden w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-white hover:bg-primary active:scale-90 transition-all shadow-lg border-2 border-slate-800 flex-shrink-0"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <Menu size={24} strokeWidth={2.5} className="md:w-7 md:h-7" />
