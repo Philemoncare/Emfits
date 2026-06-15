@@ -18,10 +18,6 @@ export default function AboutPage() {
 
       {/* Narrative Section: The Emfits Enterprise Edge */}
       <section className="py-20 md:py-32 relative">
-        <div className="absolute top-0 right-0 w-full h-full opacity-[0.02] pointer-events-none select-none overflow-hidden flex items-center justify-center">
-            <h2 className="text-[30vw] font-black uppercase tracking-tighter leading-none translate-x-20">EXCELLENCE</h2>
-        </div>
-
         <div className="app-container">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="w-full lg:w-[45%] relative reveal-left">

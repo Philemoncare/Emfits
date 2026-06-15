@@ -20,9 +20,6 @@ const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
 
       <div className="app-container relative z-10">
         <div className="max-w-4xl mx-auto text-center reveal-up">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-black uppercase tracking-[0.3em] text-primary shadow-sm">
-            Emfits Enterprise Excellence
-          </div>
           <h1 className="text-4xl md:text-7xl font-black mb-8 text-slate-900 tracking-tighter leading-[0.9] uppercase">
             {title.split(' ').map((word, i) => (
               <span key={i} className={i % 2 !== 0 ? "text-primary italic" : ""}>{word} </span>
