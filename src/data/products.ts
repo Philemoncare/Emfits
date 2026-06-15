@@ -12,8 +12,8 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Phreshy Liquid Soap",
-    price: 45.0,
-    image: "/images/gallon.png",
+    price: 60.0,
+    image: "/images/gallon2.png",
     category: "Liquid Detergents",
     description: "Premium multipurpose liquid soap for hands, dishes, and floors. Gentle on skin, tough on grease.",
     keywords: ["phreshy", "soap", "wash", "cleaning", "liquid", "multipurpose"]
@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Phreshy Fabric Softener",
-    price: 28.0,
+    price: 60.0,
     image: "/images/photo_2026-06-15_09-28-49.jpg",
     category: "Liquid Detergents",
     description: "Anti-static fabric conditioning that leaves clothes velvety soft with a long-lasting floral scent.",
@@ -48,8 +48,8 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Phreshy Disinfectant",
-    price: 25.0,
-    image: "/images/gallon2.png",
+    price: 20.0,
+    image: "/images/ged.png",
     category: "Surface Care",
     description: "Eliminates 99.9% of germs and household bacteria with a long-lasting forest pine aroma.",
     keywords: ["phreshy", "disinfectant", "germs", "bacteria", "pine", "aroma"]
