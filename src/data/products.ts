@@ -40,7 +40,7 @@ export const products: Product[] = [
     id: 4,
     name: "Phreshy Floor Cleaner",
     price: 22.0,
-    image: "/images/photo_2026-06-15_09-28-54.jpg",
+    image: "/images/ldlfs.jpg",
     category: "Surface Care",
     description: "Sparkling clean floors with a long-lasting fresh fragrance. Ideal for all types of floors.",
     keywords: ["phreshy", "surface", "tiles", "floor", "cleaner", "multi"]
@@ -49,8 +49,7 @@ export const products: Product[] = [
     id: 5,
     name: "Phreshy Disinfectant",
     price: 25.0,
-    price: 25.0,
-    image: "/images/photo_2026-06-15_09-28-58.jpg",
+    image: "/images/dwes.jpg",
     category: "Surface Care",
     description: "Eliminates 99.9% of germs and household bacteria with a long-lasting forest pine aroma.",
     keywords: ["phreshy", "disinfectant", "germs", "bacteria", "pine", "aroma"]
@@ -87,6 +86,6 @@ export const products: Product[] = [
 export const categories = [
   { name: "Liquid Detergents", image: "/images/la;s.jpg" },
   { name: "Washing Powders", image: "/images/photo_2026-06-15_09-28-45.jpg" },
-  { name: "Surface Care", image: "/images/photo_2026-06-15_09-28-54.jpg" },
+  { name: "Surface Care", image: "/images/gallon2.png" },
   { name: "Personal Hygiene", image: "/images/wesksd.jpg" },
 ];
