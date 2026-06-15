@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Search, Menu, X, MessageCircle, ShoppingCart, ChevronRight, Package, ShoppingBag } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { formatCurrency } from "@/lib/utils";
+import { formatCurrency, WHATSAPP_NUMBER } from "@/lib/utils";
 
 import { performSearch, SearchResult } from "@/lib/search-service";
 import { NAV_LINKS } from "@/data/navigation";
