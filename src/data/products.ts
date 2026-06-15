@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Phreshy Fabric Softener",
-    price: 60.0,
+    price: 30.0,
     image: "/images/photo_2026-06-15_09-28-49.jpg",
     category: "Liquid Detergents",
     description: "Anti-static fabric conditioning that leaves clothes velvety soft with a long-lasting floral scent.",
