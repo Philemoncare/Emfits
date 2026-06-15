@@ -3,7 +3,7 @@ import ProductsClient from "./ProductsClient";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Shop All Products | Premium Cleaning Solutions",
+  title: "Shop All Products | Cleaning Solutions",
   description: "Browse our full collection of high-performance detergents, fabric softeners, and home care essentials. Quality cleaning delivered to your door in Ghana.",
   keywords: ["buy detergents online", "cleaning supplies Ghana", "wholesale detergents", "Emfits products"],
 };

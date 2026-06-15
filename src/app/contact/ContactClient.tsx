@@ -69,13 +69,13 @@ export default function ContactClient() {
             {/* Contact Action Feed */}
             <div className="lg:col-span-4 flex flex-col gap-6 reveal-left">
               {[
-                { icon: MessageCircle, title: "Chat on WhatsApp", detail: "Open Portal", sub: "Fastest response (under 5 mins)", color: "text-emerald-500", bg: "bg-emerald-50", link: `https://wa.me/${WHATSAPP_NUMBER}` },
+                { icon: () => <img src="/images/whatssap logo.png" alt="WhatsApp" className="w-10 h-10 object-contain" />, title: "Chat on WhatsApp", detail: "Open Portal", sub: "Fastest response (under 5 mins)", color: "text-emerald-500", bg: "bg-emerald-50", link: `https://wa.me/${WHATSAPP_NUMBER}` },
                 { icon: Mail, title: "Official Email", detail: BUSINESS_EMAIL, sub: "For business inquiries", color: "text-blue-500", bg: "bg-blue-50", link: `mailto:${BUSINESS_EMAIL}` },
                 { icon: MapPin, title: "Our Headquarters", detail: "Takoradi, Ghana", sub: "Primary Distribution Center", color: "text-rose-500", bg: "bg-rose-50" }
               ].map((item, i) => (
                 <div key={i} className="bg-slate-50 rounded-[2rem] p-8 border border-slate-100 group hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer">
                   <div className="flex items-center gap-6">
-                    <div className={`w-16 h-16 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-6 shadow-sm`}>
+                    <div className={`w-16 h-16 ${item.bg} ${item.color} rounded-2xl flex items-center justify-center transition-all group-hover:scale-110 group-hover:rotate-6 shadow-sm overflow-hidden`}>
                       <item.icon size={32} strokeWidth={2.5} />
                     </div>
                     <div className="flex-grow min-w-0">
@@ -164,18 +164,16 @@ export default function ContactClient() {
                  <div className="grid grid-cols-1 gap-4">
                     <button
                       onClick={sendWhatsApp}
-                      className="w-full group bg-emerald-500 hover:bg-emerald-600 text-white p-6 rounded-[1.8rem] flex items-center justify-between transition-all active:scale-[0.98] shadow-xl shadow-emerald-500/20"
+                      className="btn-whatsapp-portal group !rounded-[1.8rem]"
                     >
-                       <div className="flex items-center gap-4 text-left">
-                          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                             <MessageCircle size={24} />
-                          </div>
-                          <div className="flex flex-col">
-                             <span className="font-black uppercase tracking-tighter text-lg leading-tight">WhatsApp</span>
-                             <span className="text-[10px] font-black uppercase tracking-[0.2em] opacity-70">Instant Reply</span>
-                          </div>
+                       <div className="icon-box !w-12 !h-12 !rounded-xl">
+                          <img src="/images/whatssap logo.png" alt="WhatsApp" className="!w-8 !h-8" />
                        </div>
-                       <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                       <div className="text-box">
+                          <span className="title !text-lg">WhatsApp</span>
+                          <span className="subtitle !text-[10px]">Instant Reply</span>
+                       </div>
+                       <ChevronRight size={20} className="ml-auto group-hover:translate-x-1 transition-transform" />
                     </button>
 
                     <button

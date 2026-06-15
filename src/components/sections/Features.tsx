@@ -4,7 +4,7 @@ import { Droplets, ShieldCheck, Truck, ShoppingCart } from "lucide-react";
 
 const Features = () => {
   const steps = [
-    { icon: ShoppingCart, title: "Select Products", desc: "Browse our premium hygiene catalog and select your essentials." },
+    { icon: ShoppingCart, title: "Select Products", desc: "Browse our hygiene catalog and select your essentials." },
     { icon: Droplets, title: "WhatsApp Order", desc: "Confirm your order with one tap via our dedicated WhatsApp portal." },
     { icon: Truck, title: "Express Delivery", desc: "Fast and reliable doorstep delivery across Ghana within 24 hours." }
   ];

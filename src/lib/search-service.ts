@@ -34,7 +34,7 @@ const staticContent: SearchResult[] = [
     id: 's3',
     type: 'service',
     title: 'Quality Guarantee',
-    description: 'Premium cleaning performance and quality promised on every item we sell.',
+    description: 'High cleaning performance and quality promised on every item we sell.',
     url: '/#services',
     keywords: ['quality', 'clean', 'guarantee', 'detergent']
   },
@@ -50,7 +50,7 @@ const staticContent: SearchResult[] = [
     id: 'p1',
     type: 'page',
     title: 'About Us',
-    description: 'Learn more about our mission to provide premium cleaning solutions to Ghanaian homes.',
+    description: 'Learn more about our mission to provide cleaning solutions to Ghanaian homes.',
     url: '/about',
     keywords: ['about', 'mission', 'story', 'company', 'Emfits Enterprise']
   },

@@ -14,8 +14,24 @@
   --secondary: #e31b23;
   --dark: #0f172a;
 
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-main: #334155;
+  --text-title: #0f172a;
+  --border-main: #f1f5f9;
+
   --header-height: 60px;
   --bottom-nav-height: 68px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #020617;
+    --bg-card: #0f172a;
+    --text-main: #94a3b8;
+    --text-title: #f8fafc;
+    --border-main: #1e293b;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -27,20 +43,20 @@
 @layer base {
   html {
     @apply overflow-x-hidden;
-    /* Removed scroll-behavior: smooth as it conflicts with Lenis */
   }
 
   body {
-    @apply bg-[#F8FAFC] text-slate-700 overflow-x-hidden w-full relative antialiased;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    @apply overflow-x-hidden w-full relative antialiased transition-colors duration-500;
     font-family: 'Open Sans', sans-serif;
     -webkit-tap-highlight-color: transparent;
-    /* Removed overscroll-behavior-y: none to allow natural scroll feel */
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-slate-900 font-black tracking-tighter;
+    color: var(--text-title);
+    @apply font-black tracking-tighter;
     font-family: 'Nunito', sans-serif;
-    color: inherit;
   }
 }
 
@@ -58,7 +74,9 @@
 
   /* App Card System */
   .app-card {
-    @apply bg-white rounded-[1.5rem] shadow-app border border-slate-100/50 overflow-hidden active:scale-[0.98] transition-all duration-300 w-full;
+    background-color: var(--bg-card);
+    border-color: var(--border-main);
+    @apply rounded-[1.5rem] shadow-app border overflow-hidden active:scale-[0.98] transition-all duration-300 w-full;
   }
 
   /* Motion Engine - Optimized for Performance */
@@ -141,6 +159,31 @@
 
   .btn-premium-outline {
     @apply btn-premium border-2 border-slate-100 bg-white text-slate-800 hover:bg-slate-50;
+  }
+
+  /* Advanced WhatsApp Portal Button */
+  .btn-whatsapp-portal {
+    @apply flex items-center gap-4 bg-[#25D366] text-white p-3 md:p-5 rounded-[2.5rem] shadow-xl shadow-emerald-500/20 active:scale-95 transition-all overflow-visible;
+  }
+
+  .btn-whatsapp-portal .icon-box {
+    @apply w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500 flex-shrink-0;
+  }
+
+  .btn-whatsapp-portal img {
+    @apply w-8 h-8 md:w-12 md:h-12 object-contain;
+  }
+
+  .btn-whatsapp-portal .text-box {
+    @apply flex flex-col text-left;
+  }
+
+  .btn-whatsapp-portal .title {
+    @apply text-lg md:text-2xl font-black tracking-tighter uppercase leading-none;
+  }
+
+  .btn-whatsapp-portal .subtitle {
+    @apply text-[10px] md:text-xs font-black uppercase tracking-[0.2em] opacity-80 mt-1;
   }
 }
 

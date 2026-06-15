@@ -32,7 +32,7 @@ const BottomNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-[9999] lg:hidden animate-slide-up">
       {/* Premium Glassmorphism Container */}
-      <div className="bg-white/95 backdrop-blur-2xl border-t border-slate-100 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] pb-[max(env(safe-area-inset-bottom),16px)] pt-3 px-2">
+      <div className="bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] pb-[max(env(safe-area-inset-bottom),16px)] pt-3 px-2">
         <div className="max-w-md mx-auto flex items-center justify-around">
           {navItems.map((item) => {
             const isActive = isRouteActive(item.href);
@@ -54,7 +54,7 @@ const BottomNav = () => {
                 <div
                   className={`absolute inset-0 m-auto w-12 h-12 rounded-2xl transition-all duration-500 ease-out ${
                     isActive
-                      ? 'bg-primary/10 opacity-100 scale-100'
+                      ? 'bg-primary/10 dark:bg-primary/20 opacity-100 scale-100'
                       : 'bg-transparent opacity-0 scale-50'
                   }`}
                 />
@@ -65,7 +65,7 @@ const BottomNav = () => {
                     size={22}
                     strokeWidth={isActive ? 2.5 : 2}
                     className={`transition-colors duration-300 ${
-                      isActive ? 'text-primary' : 'text-slate-400'
+                      isActive ? 'text-primary' : 'text-slate-400 dark:text-slate-500'
                     }`}
                   />
 
@@ -78,7 +78,7 @@ const BottomNav = () => {
                 {/* Label */}
                 <span
                   className={`text-[9px] font-black uppercase tracking-[0.1em] mt-1.5 transition-all duration-300 z-10 ${
-                    isActive ? 'text-primary opacity-100' : 'text-slate-400 opacity-70'
+                    isActive ? 'text-primary opacity-100' : 'text-slate-400 dark:text-slate-500 opacity-70'
                   }`}
                 >
                   {item.label}

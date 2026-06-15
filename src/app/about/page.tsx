@@ -23,19 +23,11 @@ export default function AboutPage() {
             <div className="w-full lg:w-[45%] relative reveal-left">
               <div className="relative z-10 aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl group">
                 <img
-                  src="/images/cewq.jpg"
+                  src="/images/washing machine washer.jpg"
                   alt="Emfits Enterprise Scientific Approach"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60" />
-              </div>
-
-              {/* Floating Stat Card */}
-              <div className="absolute -bottom-8 -right-8 md:-right-12 bg-white p-6 md:p-10 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-50 z-20 animate-float">
-                <div className="flex flex-col gap-1">
-                  <span className="text-4xl md:text-6xl font-black text-primary leading-none tracking-tighter">99.9%</span>
-                  <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-slate-400">Purity Rating</span>
-                </div>
               </div>
 
               {/* Decorative Element */}
@@ -53,7 +45,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-slate-500 text-base md:text-xl leading-relaxed font-bold mb-12 uppercase tracking-wide opacity-90">
-                Emfits Enterprise was founded to bridge the gap between premium international quality and local accessibility. We engineer products that don't just clean—they protect your environment and empower your lifestyle.
+                Emfits Enterprise was founded to bridge the gap between international quality and local accessibility. We engineer products that don't just clean—they protect your environment and empower your lifestyle.
               </p>
 
               <div className="space-y-6">

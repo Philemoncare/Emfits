@@ -10,7 +10,7 @@ import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
 export const metadata: Metadata = {
   metadataBase: new URL('https://emfits.com'), // Replace with your actual domain when live
   title: {
-    default: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    default: "Emfits Enterprise | Cleaning Detergents Ghana",
     template: "%s | Emfits Enterprise"
   },
   description: "Experience the ultimate clean with Emfits Enterprise. High-performance detergents, fabric softeners, and home care solutions delivered across Ghana.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "en_GH",
     url: "https://emfits.com",
     siteName: "Emfits Enterprise",
-    title: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    title: "Emfits Enterprise | Cleaning Detergents Ghana",
     description: "High-performance cleaning solutions delivered across Ghana. Experience the ultimate clean.",
     images: [{
       url: "/images/logo.png", // Using existing logo as fallback OG image
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emfits Enterprise | Premium Cleaning Detergents Ghana",
+    title: "Emfits Enterprise | Cleaning Detergents Ghana",
     description: "High-performance cleaning solutions delivered across Ghana.",
     images: ["/images/logo.png"],
   },

@@ -100,13 +100,13 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
                  <div className="animate-fade-in">
                     {activeTab === "Description" ? (
                        <p className="text-slate-500 text-sm md:text-base leading-relaxed font-bold">
-                          {product.description || "Emfits Enterprise premium cleaning solution. High-concentration formula for superior performance on all modern surfaces."}
+                          {product.description || "Emfits Enterprise cleaning solution. High-concentration formula for superior performance on all modern surfaces."}
                        </p>
                     ) : (
                        <div className="grid grid-cols-2 gap-6">
                           <div className="p-4 bg-slate-50 rounded-2xl">
                              <p className="text-[9px] font-black text-slate-400 uppercase mb-1">Standard</p>
-                             <p className="text-xs font-black text-slate-800 uppercase">Premium Grade</p>
+                             <p className="text-xs font-black text-slate-800 uppercase">Professional Grade</p>
                           </div>
                           <div className="p-4 bg-slate-50 rounded-2xl">
                              <p className="text-[9px] font-black text-slate-400 uppercase mb-1">Effect</p>

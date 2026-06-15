@@ -19,7 +19,7 @@ const DeliveryContact = () => {
                    Nationwide <br /> <span className="text-primary italic">Express Delivery</span>
                  </h2>
                  <p className="text-xs md:text-xl text-slate-400 font-medium leading-relaxed mb-6 md:mb-10">
-                   We've perfected our supply chain to ensure your premium hygiene products reach your doorstep in pristine condition, anywhere in Ghana.
+                   We've perfected our supply chain to ensure your hygiene products reach your doorstep in pristine condition, anywhere in Ghana.
                  </p>
 
                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 md:mb-12">
@@ -39,8 +39,18 @@ const DeliveryContact = () => {
                     ))}
                  </div>
 
-                 <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" className="btn-app-primary lg:w-fit lg:px-12 !py-4 md:!py-6 !text-sm md:!text-lg shadow-primary/20">
-                   <MessageCircle size={18} className="mr-2 md:w-6 md:h-6" /> Connect & Order Now
+                 <a
+                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                   target="_blank"
+                   className="btn-whatsapp-portal group w-full lg:w-fit lg:px-10"
+                 >
+                   <div className="icon-box">
+                     <img src="/images/whatssap logo.png" alt="WhatsApp" />
+                   </div>
+                   <div className="text-box">
+                     <span className="title">Connect & Order</span>
+                     <span className="subtitle">Direct Factory Portal</span>
+                   </div>
                  </a>
               </div>
 

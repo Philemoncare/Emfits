@@ -10,7 +10,7 @@ export default function CategoriesPage() {
     <main>
       <PageHeader
         title="Browse Solutions"
-        subtitle="Discover our wide range of premium cleaning products organized by specialized category."
+        subtitle="Discover our wide range of cleaning products organized by specialized category."
       />
 
       <section className="section-padding bg-white relative overflow-hidden">
@@ -61,7 +61,7 @@ export default function CategoriesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 stagger-container">
             {[
               { title: "Home Essentials Kit", desc: "A mix of everything you need for a sparkling clean home.", image: "/images/oe.jpeg", color: "from-blue-500/10" },
-              { title: "Laundry Starter Pack", desc: "Premium detergent and fabric softener for fresh clothes.", image: "/images/vde.jpg", color: "from-amber-500/10" },
+              { title: "Laundry Starter Pack", desc: "detergent and fabric softener for fresh clothes.", image: "/images/vde.jpg", color: "from-amber-500/10" },
               { title: "Deep Clean Bundle", desc: "Powerful disinfectants and multi-purpose cleaners.", image: "/images/cewq.jpg", color: "from-emerald-500/10" }
             ].map((collection, idx) => (
               <div key={idx} className="reveal-up" style={{transitionDelay: `${idx * 0.1}s`}}>

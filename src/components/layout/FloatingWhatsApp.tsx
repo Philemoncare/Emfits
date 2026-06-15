@@ -5,25 +5,19 @@ import { WHATSAPP_NUMBER } from "@/lib/utils";
 
 const FloatingWhatsApp = () => {
   return (
-    <div className="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-[500] group">
+    <div className="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-[500] group transition-transform duration-500 [.menu-open_&]:scale-0 [.menu-open_&]:pointer-events-none">
       <a
         href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-[#2581d4] text-white rounded-full shadow-[0_15px_35px_rgba(37,129,212,0.3)] transition-all duration-500 hover:scale-110 active:scale-95"
+        className="relative flex items-center justify-center w-14 h-14 lg:w-20 lg:h-20 transition-all duration-500 hover:scale-110 active:scale-95"
         aria-label="Contact on WhatsApp"
       >
-        {/* Modern Chat Icon matching the provided style exactly */}
-        <MessageCircle
-          size={32}
-          strokeWidth={2}
-          className="w-7 h-7 lg:w-9 lg:h-9"
+        <img
+          src="/images/whatssap logo.png"
+          alt="WhatsApp"
+          className="w-full h-full object-contain drop-shadow-2xl"
         />
-
-        {/* Precise Notification Badge - Green with white border and white center */}
-        <div className="absolute top-0 right-0 w-6 h-6 lg:w-7 lg:h-7 bg-[#34d399] rounded-full border-[3px] border-white shadow-sm flex items-center justify-center">
-           <div className="w-2 h-2 lg:w-2.5 lg:h-2.5 bg-white rounded-full" />
-        </div>
       </a>
 
       {/* Desktop Tooltip - Re-added for usability */}

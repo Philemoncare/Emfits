@@ -13,11 +13,11 @@ import 'swiper/css/effect-fade';
 
 const Hero = () => {
   return (
-    <section className="bg-white py-2 md:py-4 lg:py-6 overflow-hidden">
+    <section className="bg-white dark:bg-slate-950 py-2 md:py-4 lg:py-6 overflow-hidden transition-colors duration-500">
       <div className="app-container">
 
         {/* Advanced Swiper Hero Banner */}
-        <div className="relative w-full h-[520px] sm:h-[550px] md:h-[400px] lg:h-[450px] xl:h-[500px] max-w-[1280px] mx-auto overflow-hidden rounded-[2rem] md:rounded-[2.5rem] shadow-2xl group bg-slate-100">
+        <div className="relative w-full h-[520px] sm:h-[550px] md:h-[400px] lg:h-[450px] xl:h-[500px] max-w-[1280px] mx-auto overflow-hidden rounded-[2rem] md:rounded-[2.5rem] shadow-2xl group bg-slate-100 dark:bg-slate-900">
            <Swiper
               modules={[Autoplay, Pagination, EffectFade]}
               effect={'fade'}
@@ -105,7 +105,7 @@ const Hero = () => {
 
               {/* Slide 2: Superior Fabric Care (Shirt) */}
               <SwiperSlide>
-                <div className="relative w-full h-full bg-[#eef6ff] overflow-hidden">
+                <div className="relative w-full h-full bg-[#eef6ff] dark:bg-slate-900 overflow-hidden">
                    <div className="flex flex-col md:flex-row h-full">
                       {/* Image - Stays on top on mobile, side on desktop */}
                       <div className="h-[45%] md:h-full md:w-1/2 relative overflow-hidden">
@@ -115,14 +115,14 @@ const Hero = () => {
                           className="w-full h-full object-cover animate-float-slow"
                         />
                         {/* Smooth transition gradient for mobile */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#eef6ff] via-transparent to-transparent md:hidden" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#eef6ff] dark:from-slate-900 via-transparent to-transparent md:hidden" />
                       </div>
 
                       <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12 lg:px-16 pt-4 pb-12 md:py-0">
-                         <h2 className="text-slate-900 text-[clamp(1.5rem,4vw,2.8rem)] font-black mb-3 md:mb-4 leading-[1.1] tracking-tighter uppercase">
+                         <h2 className="text-slate-900 dark:text-white text-[clamp(1.5rem,4vw,2.8rem)] font-black mb-3 md:mb-4 leading-[1.1] tracking-tighter uppercase">
                             Keep Your <br className="hidden md:block" /> <span className="text-primary italic">Whites Whiter</span>
                          </h2>
-                         <p className="text-slate-500 text-xs md:text-sm lg:text-base mb-4 md:mb-6 max-w-md leading-relaxed">
+                         <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm lg:text-base mb-4 md:mb-6 max-w-md leading-relaxed">
                             Experience the brilliance of advanced optical brighteners that protect fibers while making them shine.
                          </p>
                          <Link href="/products?category=Washing%20Powders" className="btn-app-primary !w-full sm:!w-fit !px-10 !py-3 md:!py-4 shadow-2xl">
@@ -161,7 +161,7 @@ const Hero = () => {
 
               {/* Slide 4: Ultra Dishwashing Power (gallon2.png) */}
               <SwiperSlide>
-                <div className="relative w-full h-full bg-[#f0fff4] overflow-hidden">
+                <div className="relative w-full h-full bg-[#f0fff4] dark:bg-slate-900 overflow-hidden">
                    <div className="flex flex-col md:grid md:grid-cols-2 h-full">
                       <div className="relative h-[40%] md:h-full w-full order-1 md:order-2 flex items-center justify-center p-6 md:p-12 lg:p-16">
                         <img
@@ -169,22 +169,22 @@ const Hero = () => {
                           alt="Phreshy Clean"
                           className="h-full md:max-h-full w-auto md:w-full object-contain drop-shadow-2xl"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#f0fff4] via-transparent to-transparent md:hidden" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#f0fff4] dark:from-slate-900 via-transparent to-transparent md:hidden" />
                       </div>
 
                       <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12 lg:px-16 pb-12 md:pb-0 z-10 order-2 md:order-1">
                         <div className="bg-yellow-400 text-black px-4 py-1.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.2em] mb-3 w-fit shadow-lg">
                           Special Promo Offer
                         </div>
-                        <h2 className="text-slate-900 text-[clamp(1.8rem,5vw,3.2rem)] font-black mb-3 md:mb-4 leading-tight tracking-tighter uppercase">
+                        <h2 className="text-slate-900 dark:text-white text-[clamp(1.8rem,5vw,3.2rem)] font-black mb-3 md:mb-4 leading-tight tracking-tighter uppercase">
                           PHRESHY <br/> <span className="text-green-600">LIQUID SOAP</span>
                         </h2>
-                        <p className="text-slate-800 text-xs md:text-sm lg:text-base font-black uppercase tracking-[0.15em] mb-4">
+                        <p className="text-slate-800 dark:text-slate-200 text-xs md:text-sm lg:text-base font-black uppercase tracking-[0.15em] mb-4">
                           Hands • Dishes • Floors
                         </p>
 
-                        <div className="bg-white/60 backdrop-blur-md p-3 md:p-4 rounded-[1.2rem] border border-green-100 shadow-xl mb-4 md:mb-6 max-w-md">
-                          <p className="text-slate-600 text-[11px] md:text-xs lg:text-sm font-bold uppercase tracking-wider leading-relaxed">
+                        <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md p-3 md:p-4 rounded-[1.2rem] border border-green-100 dark:border-green-900/30 shadow-xl mb-4 md:mb-6 max-w-md">
+                          <p className="text-slate-600 dark:text-slate-300 text-[11px] md:text-xs lg:text-sm font-bold uppercase tracking-wider leading-relaxed">
                             Experience the powerful way with Phreshy multi-purpose liquid soap. Engineered for powerful cleaning and long-lasting freshness.
                           </p>
                         </div>
@@ -263,7 +263,7 @@ const Hero = () => {
            <div className="flex items-center justify-between mb-6 md:mb-10 px-2">
               <div className="flex flex-col gap-1">
                 <h2 className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-primary">Discover</h2>
-                <p className="text-lg md:text-3xl font-black text-slate-900 tracking-tighter">Shop by Category</p>
+                <p className="text-lg md:text-3xl font-black text-slate-900 dark:text-white tracking-tighter">Shop by Category</p>
               </div>
               <Link href="/products" className="text-[10px] md:text-xs font-black uppercase text-slate-400 hover:text-primary tracking-[0.2em] flex items-center gap-1 transition-colors">
                 VIEW ALL <ChevronRight size={14} />
@@ -272,8 +272,8 @@ const Hero = () => {
 
            <div className="relative overflow-hidden py-4 -mx-4 md:-mx-10 lg:-mx-12">
               {/* Fade Edges */}
-              <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-white dark:from-slate-950 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-white dark:from-slate-950 to-transparent z-10 pointer-events-none" />
 
               <div className="animate-marquee flex gap-6 md:gap-12 px-4">
                  {[...Array(4)].map((_, groupIndex) => (
@@ -290,15 +290,15 @@ const Hero = () => {
                             href={`/products?category=${encodeURIComponent(cat.name)}`}
                             className="flex flex-col items-center gap-4 md:gap-6 group"
                           >
-                             <div className="w-24 h-24 md:w-48 md:h-48 rounded-[2rem] md:rounded-[3rem] bg-white shadow-app border border-slate-100/50 flex items-center justify-center p-4 md:p-10 active:scale-95 group-hover:animate-pulse-scale active:animate-pulse-scale transition-all overflow-hidden relative">
+                             <div className="w-24 h-24 md:w-48 md:h-48 rounded-[2rem] md:rounded-[3rem] bg-white dark:bg-slate-800 shadow-app border border-slate-100/50 dark:border-slate-700 flex items-center justify-center p-4 md:p-10 active:scale-95 group-hover:animate-pulse-scale active:animate-pulse-scale transition-all overflow-hidden relative">
                                 <img
                                   src={cat.img}
                                   alt={cat.name}
                                   className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
                                 />
-                                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div className="absolute inset-0 bg-primary/5 dark:bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                              </div>
-                             <span className="text-[10px] md:text-xs font-black text-slate-800 tracking-widest whitespace-nowrap uppercase text-center group-hover:text-primary transition-colors">
+                             <span className="text-[10px] md:text-xs font-black text-slate-800 dark:text-slate-200 tracking-widest whitespace-nowrap uppercase text-center group-hover:text-primary transition-colors">
                                 {cat.name}
                              </span>
                           </Link>

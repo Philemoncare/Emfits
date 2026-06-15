@@ -51,7 +51,7 @@ export default function ProductsClient() {
       <div className="bg-white pb-12 shadow-sm rounded-b-[3rem] md:rounded-b-[5rem]">
          <PageHeader
             title="Shop Essentials"
-            subtitle="Premium cleaning solutions for every Ghanaian home, delivered to your door."
+            subtitle="Cleaning solutions for every Ghanaian home, delivered to your door."
          />
 
          {/* Refined Filter System */}

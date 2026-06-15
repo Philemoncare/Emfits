@@ -11,16 +11,16 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Phreshy Liquid Soap",
+    name: "Phreshy Multipurpose Liquid Soap",
     price: 60.0,
     image: "/images/gallon2.png",
     category: "Liquid Detergents",
-    description: "Premium multipurpose liquid soap for hands, dishes, and floors. Gentle on skin, tough on grease.",
+    description: "multipurpose liquid soap for hands, dishes, and floors. Gentle on skin, tough on grease.",
     keywords: ["phreshy", "soap", "wash", "cleaning", "liquid", "multipurpose"]
   },
   {
     id: 2,
-    name: "Phreshy Washing Powder",
+    name: "Phreshy Zone Bleach",
     price: 20.0,
     image: "/images/photo_2026-06-15_09-28-45.jpg",
     category: "Washing Powders",
@@ -51,41 +51,32 @@ export const products: Product[] = [
     price: 25.0,
     image: "/images/ged.png",
     category: "Surface Care",
-    description: "Eliminates 99.9% of germs and household bacteria with a long-lasting forest pine aroma.",
-    keywords: ["phreshy", "disinfectant", "germs", "bacteria", "pine", "aroma"]
-  },
-  {
-    id: 6,
-    name: "Phreshy Dishwashing Liquid",
-    price: 25.0,
-    image: "/images/photo_2026-06-15_09-29-02.jpg",
-    category: "Liquid Detergents",
-    description: "Rapid grease-cutting technology for spotlessly clean dishes. Gentle on skin, tough on oil.",
-    keywords: ["phreshy", "dishes", "grease", "oil", "soap", "kitchen", "liquid"]
+    description: "Blast away every germ. High-concentration disinfectant for deep hygiene and a pure, germ-free environment.",
+    keywords: ["phreshy", "disinfectant", "germs", "bacteria", "clean", "hygiene"]
   },
   {
     id: 7,
     name: "Phreshy Aloe Hand Wash",
     price: 18.0,
-    image: "/images/safw.jpg",
+    image: "/images/wesksd.jpg",
     category: "Personal Hygiene",
     description: "Anti-microbial hand hygiene enriched with pure Aloe Vera extracts for soft, healthy hands.",
     keywords: ["phreshy", "hand", "wash", "soap", "aloe", "hygiene", "skin"]
   },
   {
     id: 8,
-    name: "Phreshy WC Cleaner",
+    name: "Phreshy WC Toilet Cleaner",
     price: 25.0,
-    image: "/images/gallon2.png",
+    image: "/images/photo_2026-06-15_09-29-02.jpg",
     category: "Surface Care",
-    description: "Thick formula for deep cleaning. Removes stains & tough dirt while killing 99.9% of germs for better hygiene.",
+    description: "Advanced toilet cleaning formula. Fresh scent and superior clean for a sparkling bathroom.",
     keywords: ["phreshy", "toilet", "bathroom", "germs", "cleaner", "hygiene"]
   },
 ];
 
 export const categories = [
-  { name: "Liquid Detergents", image: "/images/la;s.jpg" },
+  { name: "Liquid Detergents", image: "/images/gallon2.png" },
   { name: "Washing Powders", image: "/images/photo_2026-06-15_09-28-45.jpg" },
-  { name: "Surface Care", image: "/images/gallon.png" },
+  { name: "Surface Care", image: "/images/photo_2026-06-15_09-29-02.jpg" },
   { name: "Personal Hygiene", image: "/images/wesksd.jpg" },
 ];

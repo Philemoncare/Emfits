@@ -20,7 +20,7 @@ const posts = [
   },
   {
     title: "Industrial Hygiene Standards for Businesses",
-    excerpt: "How Takoradi's top hotels and schools maintain premium hygiene levels using our bulk supply solutions.",
+    excerpt: "How Takoradi's top hotels and schools maintain high hygiene levels using our bulk supply solutions.",
     image: "/images/sh2.jpg",
     date: "18 May 2026",
     category: "Business",
