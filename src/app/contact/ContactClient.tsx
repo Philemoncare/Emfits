@@ -2,10 +2,15 @@
 
 import PageHeader from "@/components/shared/PageHeader";
 import { Phone, MapPin, MessageCircle, Clock, Send, Mail, ChevronRight, X, Sparkles } from "lucide-react";
-import { WHATSAPP_NUMBER, BUSINESS_EMAIL } from "@/lib/utils";
-import { useState } from "react";
+import { WHATSAPP_NUMBER, BUSINESS_EMAIL, formatCurrency } from "@/lib/utils";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { products } from "@/data/products";
 
 export default function ContactClient() {
+  const searchParams = useSearchParams();
+  const productId = searchParams.get("productId");
+
   const [showPrompt, setShowPrompt] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +18,19 @@ export default function ContactClient() {
     subject: "",
     details: ""
   });
+
+  useEffect(() => {
+    if (productId) {
+      const product = products.find(p => p.id === Number(productId));
+      if (product) {
+        setFormData(prev => ({
+          ...prev,
+          subject: `Order Inquiry: ${product.name}`,
+          details: `I am interested in ordering the ${product.name} priced at ${formatCurrency(product.price)}. Please provide more details on how to proceed.`
+        }));
+      }
+    }
+  }, [productId]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;

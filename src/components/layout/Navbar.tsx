@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Menu, X, MessageCircle, ShoppingCart, ChevronRight, Package } from "lucide-react";
+import { Search, Menu, X, MessageCircle, ShoppingCart, ChevronRight, Package, ShoppingBag } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { formatCurrency, WHATSAPP_NUMBER } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils";
 
 import { performSearch, SearchResult } from "@/lib/search-service";
 import { NAV_LINKS } from "@/data/navigation";
@@ -89,11 +89,11 @@ const Navbar = () => {
     }
   };
 
-  const handleWhatsAppOrder = (e: React.MouseEvent, result: SearchResult) => {
+  const handleOrderRedirect = (e: React.MouseEvent, result: SearchResult) => {
     e.preventDefault();
     e.stopPropagation();
-    const message = `Hello Emfits Enterprise! I'm interested in: ${result.title}\nPrice: ${result.price ? formatCurrency(result.price) : 'N/A'}`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+    router.push(`/contact?productId=${result.id}`);
+    setIsSearchActive(false);
   };
 
   return (
@@ -210,10 +210,10 @@ const Navbar = () => {
                           </div>
                         </div>
                         <button
-                          onClick={(e) => handleWhatsAppOrder(e, result)}
+                          onClick={(e) => handleOrderRedirect(e, result)}
                           className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-slate-900 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary shadow-lg translate-x-4 group-hover:translate-x-0"
                         >
-                          <MessageCircle size={18} />
+                          <ShoppingBag size={18} />
                         </button>
                       </div>
                     ))}

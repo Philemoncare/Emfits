@@ -1,20 +1,22 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ShoppingBag } from "lucide-react";
 import { Product } from "@/data/products";
-import { formatCurrency, WHATSAPP_NUMBER } from "@/lib/utils";
+import { formatCurrency } from "@/lib/utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const handleWhatsAppOrder = (e: React.MouseEvent) => {
+  const router = useRouter();
+
+  const handleOrderRedirect = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    const message = `Hello Emfits Enterprise! I'm interested in: ${product.name}\nPrice: ${formatCurrency(product.price)}\n\nPlease assist me.`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+    router.push(`/contact?productId=${product.id}`);
   };
 
   return (
@@ -59,10 +61,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
 
           <button
-            onClick={handleWhatsAppOrder}
+            onClick={handleOrderRedirect}
             className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center transition-all active:scale-90 shadow-sm md:group-hover:bg-slate-900 md:group-hover:text-white md:group-hover:shadow-xl md:group-hover:-translate-y-1 duration-300"
           >
-            <MessageCircle size={18} className="md:w-6 md:h-6" strokeWidth={2} />
+            <ShoppingBag size={18} className="md:w-6 md:h-6" strokeWidth={2} />
           </button>
         </div>
       </div>

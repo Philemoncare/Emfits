@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { Product, products } from "@/data/products";
-import { formatCurrency, WHATSAPP_NUMBER } from "@/lib/utils";
-import { MessageCircle, Star, ArrowRight, ChevronLeft, Heart, Share2 } from "lucide-react";
+import { formatCurrency } from "@/lib/utils";
+import { MessageCircle, Star, ArrowRight, ChevronLeft, Heart, Share2, ShoppingBag } from "lucide-react";
 import ProductCard from "@/components/shared/ProductCard";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,10 +20,8 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
 
-  const handleWhatsAppOrder = () => {
-    const message = `Hello Emfits Enterprise! I'm interested in: ${product.name}\nPrice: ${formatCurrency(product.price)}\n\nPlease assist me with my order.`;
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+  const handleOrderRedirect = () => {
+    router.push(`/contact?productId=${product.id}`);
   };
 
   return (
@@ -121,8 +119,8 @@ export default function ProductDetailsClient({ product }: ProductDetailsClientPr
 
               {/* Mobile Actions - Floating Bottom Fix */}
               <div className="mt-auto pt-10 grid grid-cols-1 gap-4">
-                 <button onClick={handleWhatsAppOrder} className="btn-app-primary group !py-5">
-                    <MessageCircle size={20} className="mr-2" /> Order on WhatsApp
+                 <button onClick={handleOrderRedirect} className="btn-app-primary group !py-5 uppercase tracking-widest text-sm">
+                    <ShoppingBag size={20} className="mr-2" /> Proceed to Order
                  </button>
                  <p className="text-center text-[10px] text-slate-400 font-bold uppercase tracking-widest">
                     Next Day Delivery across major Ghana cities
