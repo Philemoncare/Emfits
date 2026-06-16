@@ -105,28 +105,32 @@ const Hero = () => {
 
               {/* Slide 2: Superior Fabric Care (Bleach) */}
               <SwiperSlide>
-                <div className="relative w-full h-full bg-[#eef6ff] dark:bg-slate-900 overflow-hidden">
+                <div className="relative w-full h-full bg-[#78a7d1] dark:bg-slate-900 overflow-hidden">
                    <div className="flex flex-col md:flex-row h-full">
-                      {/* Image - Stays on top on mobile, side on desktop */}
-                      <div className="h-[45%] md:h-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-8">
+                      {/* Image - Fully blended with background */}
+                      <div className="h-[50%] md:h-full md:w-1/2 relative overflow-hidden">
                         <img
                           src="/images/shirt.jpg"
-                          alt="Phreshy Zone Bleach"
-                          className="h-full w-auto object-contain animate-float drop-shadow-2xl"
+                          alt="Superior Fabric Care"
+                          className="w-full h-full object-cover animate-float-slow"
                         />
-                        {/* Smooth transition gradient for mobile */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#eef6ff] dark:from-slate-900 via-transparent to-transparent md:hidden" />
+                        {/* Soft blend gradients */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#78a7d1] via-transparent to-transparent md:hidden" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#78a7d1] hidden md:block" />
                       </div>
 
-                      <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12 lg:px-16 pt-4 pb-12 md:py-0">
-                         <h2 className="text-slate-900 dark:text-white text-[clamp(1.5rem,4vw,2.8rem)] font-black mb-3 md:mb-4 leading-[1.1] tracking-tighter uppercase">
-                            Keep Your <br className="hidden md:block" /> <span className="text-primary italic">Whites Whiter</span>
+                      <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12 lg:px-16 pt-4 pb-12 md:py-0 relative z-10">
+                         <div className="bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black text-white uppercase tracking-[0.3em] mb-4 border border-white/20">
+                            Premium Fabric Care
+                         </div>
+                         <h2 className="text-white text-[clamp(1.8rem,4vw,3.2rem)] font-black mb-4 leading-[1] tracking-tighter uppercase">
+                            Keep Your <br className="hidden md:block" /> <span className="text-blue-100 italic">Whites Whiter</span>
                          </h2>
-                         <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm lg:text-base mb-4 md:mb-6 max-w-md leading-relaxed">
-                            Experience the brilliance of Phreshy Zone Bleach. Advanced deep-fiber cleaning that eliminates tough grime while whitening.
+                         <p className="text-white/80 text-xs md:text-sm lg:text-base mb-6 max-w-md leading-relaxed font-medium">
+                            Experience the brilliance of Emfits Enterprise. Advanced deep-fiber cleaning that eliminates tough grime while preserving fabric integrity.
                          </p>
-                         <Link href="/products?category=Washing%20Powders" className="btn-app-primary !w-full sm:!w-fit !px-10 !py-3 md:!py-4 shadow-2xl">
-                            Explore Bleach
+                         <Link href="/products?category=Washing%20Powders" className="btn-app-primary !bg-white !text-primary hover:!bg-blue-50 !w-full sm:!w-fit !px-10 shadow-2xl">
+                            Explore Collection
                          </Link>
                       </div>
                    </div>
