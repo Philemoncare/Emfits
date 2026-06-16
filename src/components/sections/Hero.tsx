@@ -110,7 +110,7 @@ const Hero = () => {
                       {/* Image - Stays on top on mobile, side on desktop */}
                       <div className="h-[45%] md:h-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-8">
                         <img
-                          src="/images/weo.png"
+                          src="/images/shirt.jpg"
                           alt="Phreshy Zone Bleach"
                           className="h-full w-auto object-contain animate-float drop-shadow-2xl"
                         />
