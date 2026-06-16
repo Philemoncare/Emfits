@@ -76,27 +76,33 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`header-app ${isScrolled ? 'shadow-app' : ''} bg-white/80 dark:bg-slate-950/80 dark:border-slate-800`}>
+      <header className={`header-app transition-all duration-700 ${isScrolled ? 'bg-white/10 border-b border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]' : 'bg-transparent border-b-transparent'} backdrop-blur-2xl`}>
         <div className="app-container h-full flex items-center justify-between gap-4">
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group">
             <div className="flex items-center gap-2 md:gap-3">
-              <div className="bg-white dark:bg-slate-800 p-1.5 md:p-2 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 transition-transform group-hover:scale-110">
+              <div className="bg-white p-1.5 md:p-2 rounded-2xl shadow-sm border border-slate-100 transition-all duration-500 group-hover:shadow-xl group-hover:shadow-primary/10 group-hover:-translate-y-0.5">
                 <img src="/images/logo.png" alt="Emfits Enterprise" className="h-7 md:h-10 w-auto" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">EMFITS</span>
+                <span className={`text-lg md:text-2xl font-black uppercase tracking-tighter leading-none transition-colors duration-500 ${isScrolled ? 'text-slate-900' : 'text-white'}`}>EMFITS</span>
                 <span className="text-[7px] md:text-[10px] font-black text-primary uppercase tracking-[0.3em] mt-0.5 md:mt-1">ENTERPRISE</span>
               </div>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-2">
             {NAV_LINKS.map((link) => (
-              <Link key={link.label} href={link.href} className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-primary transition-all">
-                {link.label}
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`relative px-5 py-2.5 text-[10px] font-black uppercase tracking-[0.25em] transition-all group overflow-hidden ${isScrolled ? 'text-slate-600' : 'text-white/90'}`}
+              >
+                <span className={`relative z-10 transition-colors duration-300 ${isScrolled ? 'group-hover:text-primary' : 'group-hover:text-white'}`}>{link.label}</span>
+                <span className={`absolute inset-0 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out origin-center ${isScrolled ? 'bg-primary/5' : 'bg-white/10'}`} />
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-500 ${isScrolled ? 'bg-primary group-hover:w-1/3' : 'bg-white group-hover:w-1/3'}`} />
               </Link>
             ))}
           </nav>
@@ -104,14 +110,14 @@ const Navbar = () => {
           {/* Action Area */}
           <div className="flex items-center gap-2 md:gap-4">
             <button
-              className="hidden xl:flex w-10 h-10 md:w-14 md:h-14 rounded-2xl bg-slate-50 dark:bg-white/5 items-center justify-center text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-all"
+              className={`hidden xl:flex w-10 h-10 md:w-14 md:h-14 rounded-2xl items-center justify-center transition-all duration-500 hover:-translate-y-0.5 active:scale-95 ${isScrolled ? 'bg-slate-50 text-slate-900 hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20' : 'bg-white/10 text-white hover:bg-white/20'}`}
               onClick={() => setIsSearchActive(true)}
             >
-              <Search size={20} />
+              <Search size={20} strokeWidth={2.5} />
             </button>
 
             <button
-              className="xl:hidden w-10 h-10 md:w-12 md:h-12 rounded-xl bg-slate-900 flex items-center justify-center text-white"
+              className={`xl:hidden w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center transition-colors ${isScrolled ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'}`}
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu size={24} />

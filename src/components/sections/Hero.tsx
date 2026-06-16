@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, MessageCircle, ShoppingBag, Sparkles } from "lucide-react";
+import { ChevronRight, MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/utils";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -103,16 +103,16 @@ const Hero = () => {
                 </div>
               </SwiperSlide>
 
-              {/* Slide 2: Superior Fabric Care (Shirt) */}
+              {/* Slide 2: Superior Fabric Care (Bleach) */}
               <SwiperSlide>
                 <div className="relative w-full h-full bg-[#eef6ff] dark:bg-slate-900 overflow-hidden">
                    <div className="flex flex-col md:flex-row h-full">
                       {/* Image - Stays on top on mobile, side on desktop */}
-                      <div className="h-[45%] md:h-full md:w-1/2 relative overflow-hidden">
+                      <div className="h-[45%] md:h-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-8">
                         <img
-                          src="/images/shirt.jpg"
-                          alt="Pure White Shirt"
-                          className="w-full h-full object-cover animate-float-slow"
+                          src="/images/weo.png"
+                          alt="Phreshy Zone Bleach"
+                          className="h-full w-auto object-contain animate-float drop-shadow-2xl"
                         />
                         {/* Smooth transition gradient for mobile */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#eef6ff] dark:from-slate-900 via-transparent to-transparent md:hidden" />
@@ -123,10 +123,10 @@ const Hero = () => {
                             Keep Your <br className="hidden md:block" /> <span className="text-primary italic">Whites Whiter</span>
                          </h2>
                          <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm lg:text-base mb-4 md:mb-6 max-w-md leading-relaxed">
-                            Experience the brilliance of advanced optical brighteners that protect fibers while making them shine.
+                            Experience the brilliance of Phreshy Zone Bleach. Advanced deep-fiber cleaning that eliminates tough grime while whitening.
                          </p>
                          <Link href="/products?category=Washing%20Powders" className="btn-app-primary !w-full sm:!w-fit !px-10 !py-3 md:!py-4 shadow-2xl">
-                            Explore Powders
+                            Explore Bleach
                          </Link>
                       </div>
                    </div>
@@ -290,7 +290,7 @@ const Hero = () => {
                             href={`/products?category=${encodeURIComponent(cat.name)}`}
                             className="flex flex-col items-center gap-4 md:gap-6 group"
                           >
-                             <div className="w-24 h-24 md:w-48 md:h-48 rounded-[2rem] md:rounded-[3rem] bg-white dark:bg-slate-800 shadow-app border border-slate-100/50 dark:border-slate-700 flex items-center justify-center p-4 md:p-10 active:scale-95 group-hover:animate-pulse-scale active:animate-pulse-scale transition-all overflow-hidden relative">
+                             <div className="w-24 h-24 md:w-48 md:h-48 rounded-[2rem] md:rounded-[3rem] bg-white dark:bg-slate-800 shadow-app border border-slate-100/50 dark:border-slate-700 flex items-center justify-center p-4 md:p-10 active:scale-95 transition-all overflow-hidden relative">
                                 <img
                                   src={cat.img}
                                   alt={cat.name}

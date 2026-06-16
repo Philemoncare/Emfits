@@ -51,6 +51,12 @@
     @apply overflow-x-hidden w-full relative antialiased transition-colors duration-500;
     font-family: 'Open Sans', sans-serif;
     -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -63,12 +69,12 @@
 @layer components {
   /* Optimized Adaptive Container System */
   .app-container {
-    @apply mx-auto w-full px-4 md:px-10 lg:px-12 max-w-[1440px] relative overflow-hidden md:overflow-visible;
+    @apply mx-auto w-full px-4 md:px-10 lg:px-12 max-w-[1440px] relative;
   }
 
   /* Horizontal Scroll Reel - Stabilized for Mobile */
   .scroll-reel {
-    @apply flex overflow-x-auto gap-4 py-4 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-5 lg:mx-0 lg:px-0 lg:overflow-visible w-auto md:w-full;
+    @apply flex overflow-x-auto gap-3 md:gap-6 py-4 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-5 lg:mx-0 lg:px-0 lg:overflow-visible w-auto md:w-full;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -117,7 +123,7 @@
 
 
   .app-section {
-    @apply py-8 md:py-24 lg:py-32 overflow-hidden;
+    @apply py-8 md:py-16 lg:py-24 overflow-hidden;
   }
 
   .btn-app-primary {

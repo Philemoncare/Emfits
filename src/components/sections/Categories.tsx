@@ -19,24 +19,24 @@ const CategoriesSection = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
-          {categories.slice(0, 6).map((cat, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          {categories.slice(0, 4).map((cat, i) => (
             <Link
               key={i}
-              href={`/search?c=${encodeURIComponent(cat.name)}`}
+              href={`/products?category=${encodeURIComponent(cat.name)}`}
               className="group flex flex-col items-center text-center reveal-up"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className="relative w-full aspect-square rounded-[2rem] lg:rounded-[3rem] bg-slate-50 border border-slate-100/50 flex items-center justify-center p-6 mb-6 group-hover:bg-primary/5 group-hover:border-primary/20 group-hover:-translate-y-2 group-hover:animate-pulse-scale active:animate-pulse-scale transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl">
+              <div className="relative w-full aspect-square rounded-[2.5rem] bg-slate-50 border border-slate-100 flex items-center justify-center p-6 md:p-10 mb-6 group-hover:bg-white group-hover:border-primary/20 group-hover:-translate-y-2 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-2xl">
                  <img
                    src={cat.image}
                    alt={cat.name}
-                   className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                   className="w-[85%] h-[85%] object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h3 className="text-sm md:text-base font-black text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors">{cat.name}</h3>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Explore</p>
+              <h3 className="text-xs md:text-lg font-black text-slate-900 uppercase tracking-tighter group-hover:text-primary transition-colors leading-tight">{cat.name}</h3>
+              <p className="text-[9px] md:text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-2 group-hover:text-primary transition-colors">Explore Category</p>
             </Link>
           ))}
         </div>

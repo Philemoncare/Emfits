@@ -73,14 +73,14 @@ export default function ProductsClient() {
                </div>
 
                {/* Categories Reel - Pill Style */}
-               <div className="flex overflow-x-auto gap-3 pb-2 hide-scrollbar -mx-4 px-4 justify-start md:justify-center">
+               <div className="flex overflow-x-auto gap-3 pb-4 hide-scrollbar -mx-4 px-4 justify-start md:justify-center">
                   {allCategories.map(cat => (
                      <button
                         key={cat}
                         onClick={() => setSelectedCategory(cat)}
-                        className={`shrink-0 px-8 py-3 rounded-full font-black text-[10px] uppercase tracking-[0.2em] transition-all duration-500 border-2 ${
+                        className={`shrink-0 px-8 py-4 rounded-[1.5rem] font-black text-[10px] uppercase tracking-[0.2em] transition-all duration-500 border-2 ${
                            selectedCategory === cat
-                           ? 'bg-slate-900 border-slate-900 text-white shadow-2xl shadow-slate-900/20 scale-105'
+                           ? 'bg-primary border-primary text-white shadow-2xl shadow-primary/20 scale-105'
                            : 'bg-white border-slate-100 text-slate-400 hover:border-slate-200'
                         }`}
                      >
@@ -92,21 +92,22 @@ export default function ProductsClient() {
          </div>
       </div>
 
-      <section className="py-12 md:py-20">
+      <section className="py-8 md:py-20">
         <div className="app-container">
-          <div className="flex items-center justify-between mb-10 px-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 px-4">
              <div className="flex flex-col">
                 <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em] mb-1">Collection</span>
-                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase">{selectedCategory} Items</h2>
+                <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase">{selectedCategory} Items</h2>
              </div>
-             <div className="bg-white px-4 py-2 rounded-2xl border border-slate-100 shadow-sm text-[10px] font-black text-slate-400 uppercase tracking-widest">
+             <div className="w-fit bg-white px-5 py-2.5 rounded-2xl border border-slate-100 shadow-sm text-[11px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 {filteredProducts.length} Results
              </div>
           </div>
 
           {/* Products Grid - Modern spacing */}
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-10">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10">
               {filteredProducts.map((product, idx) => (
                 <div key={product.id} className="reveal-up" style={{transitionDelay: `${idx * 0.05}s`}}>
                   <ProductCard product={product} />

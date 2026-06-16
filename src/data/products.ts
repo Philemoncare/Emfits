@@ -22,7 +22,7 @@ export const products: Product[] = [
     id: 2,
     name: "Phreshy Zone Bleach",
     price: 20.0,
-    image: "/images/photo_2026-06-15_09-28-45.jpg",
+    image: "/images/weo.png",
     category: "Washing Powders",
     description: "Scientific deep-fiber cleaning powder that eliminates tough grime while whitening whites.",
     keywords: ["phreshy", "soap", "wash", "clothes", "cleaning", "laundry", "powder"]
@@ -63,20 +63,11 @@ export const products: Product[] = [
     description: "Anti-microbial hand hygiene enriched with pure Aloe Vera extracts for soft, healthy hands.",
     keywords: ["phreshy", "hand", "wash", "soap", "aloe", "hygiene", "skin"]
   },
-  {
-    id: 8,
-    name: "Phreshy WC Toilet Cleaner",
-    price: 25.0,
-    image: "/images/photo_2026-06-15_09-29-02.jpg",
-    category: "Surface Care",
-    description: "Advanced toilet cleaning formula. Fresh scent and superior clean for a sparkling bathroom.",
-    keywords: ["phreshy", "toilet", "bathroom", "germs", "cleaner", "hygiene"]
-  },
 ];
 
 export const categories = [
   { name: "Liquid Detergents", image: "/images/gallon2.png" },
-  { name: "Washing Powders", image: "/images/photo_2026-06-15_09-28-45.jpg" },
-  { name: "Surface Care", image: "/images/photo_2026-06-15_09-29-02.jpg" },
+  { name: "Washing Powders", image: "/images/weo.png" },
+  { name: "Surface Care", image: "/images/gallon.png" },
   { name: "Personal Hygiene", image: "/images/wesksd.jpg" },
 ];
