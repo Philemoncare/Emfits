@@ -48,40 +48,41 @@ export default function ProductsClient() {
 
   return (
     <main className="bg-slate-50/50 min-h-screen pb-20">
-      <div className="bg-white pb-12 shadow-sm rounded-b-[3rem] md:rounded-b-[5rem]">
+      <div className="bg-white pb-8 md:pb-12 shadow-sm rounded-b-[2.5rem] md:rounded-b-[5rem]">
          <PageHeader
             title="Shop Essentials"
             subtitle="Cleaning solutions for every Ghanaian home, delivered to your door."
+            hideIndicator={true}
          />
 
          {/* Refined Filter System */}
          <div className="app-container">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6 md:gap-8 -mt-4 md:mt-0">
                {/* Search Bar - Modern App Style */}
                <div className="relative group max-w-2xl mx-auto w-full">
                   <div className="absolute inset-0 bg-primary/5 blur-2xl rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity" />
                   <input
                      type="text"
-                     className="relative w-full bg-slate-50 border-2 border-transparent outline-none p-5 md:p-6 rounded-[2rem] font-bold text-sm md:text-base focus:bg-white focus:border-primary/20 transition-all shadow-sm"
+                     className="relative w-full bg-slate-50 border-2 border-slate-100 outline-none p-4 md:p-6 rounded-2xl md:rounded-[2rem] font-bold text-xs md:text-base focus:bg-white focus:border-primary/20 transition-all shadow-sm pr-16 md:pr-20"
                      placeholder="What are you looking for?"
                      value={searchQuery}
                      onChange={(e) => setSearchQuery(e.target.value)}
                   />
-                  <div className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:scale-105">
-                    <SearchIcon size={20} />
+                  <div className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-slate-900 rounded-xl md:rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:scale-105">
+                    <SearchIcon size={18} className="md:w-5 md:h-5" />
                   </div>
                </div>
 
-               {/* Categories Reel - Pill Style */}
-               <div className="flex overflow-x-auto gap-3 pb-4 hide-scrollbar -mx-4 px-4 justify-start md:justify-center">
+               {/* Categories Reel - High-End Pill Style */}
+               <div className="flex overflow-x-auto gap-3 md:gap-4 pb-4 hide-scrollbar -mx-4 px-4 justify-start md:justify-center items-center h-20">
                   {allCategories.map(cat => (
                      <button
                         key={cat}
                         onClick={() => setSelectedCategory(cat)}
-                        className={`shrink-0 px-8 py-4 rounded-[1.5rem] font-black text-[10px] uppercase tracking-[0.2em] transition-all duration-500 border-2 ${
+                        className={`shrink-0 px-6 md:px-10 py-2.5 md:py-3.5 rounded-full font-black text-[9px] md:text-[11px] uppercase tracking-[0.15em] md:tracking-[0.25em] transition-all duration-500 border-2 ${
                            selectedCategory === cat
-                           ? 'bg-primary border-primary text-white shadow-2xl shadow-primary/20 scale-105'
-                           : 'bg-white border-slate-100 text-slate-400 hover:border-slate-200'
+                           ? 'bg-primary border-primary text-white shadow-[0_15px_30px_-5px_rgba(0,119,200,0.4)] scale-110 z-10'
+                           : 'bg-white border-slate-100 text-slate-400 hover:border-slate-200 hover:text-slate-600'
                         }`}
                      >
                         {cat}
