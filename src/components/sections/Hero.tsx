@@ -105,37 +105,37 @@ const Hero = () => {
 
               {/* Slide 2: Superior Fabric Care (Shirt) */}
               <SwiperSlide>
-                <div className="relative w-full h-full bg-[#5b96c9] dark:bg-slate-900 overflow-hidden">
-                   {/* Dynamic Lighting Effects to match shirt image */}
-                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(255,255,255,0.25)_0%,_transparent_60%)] pointer-events-none" />
-                   <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-400/20 blur-[100px] rounded-full" />
+                <div className="relative w-full h-full bg-[#87b9e0] dark:bg-slate-900 overflow-hidden">
+                   {/* Dynamic Lighting Effects to match the new shirt render */}
+                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_rgba(255,255,255,0.4)_0%,_transparent_50%)] pointer-events-none" />
+                   <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-300/20 blur-[120px] rounded-full" />
 
                    <div className="flex flex-col md:flex-row h-full">
-                      {/* Image - Fully integrated */}
+                      {/* Image - Immersive Blend */}
                       <div className="h-[55%] md:h-full md:w-1/2 relative overflow-hidden">
                         <img
                           src="/images/shirt.jpg"
                           alt="Premium Fabric Care"
-                          className="w-full h-full object-cover animate-float"
+                          className="w-full h-full object-cover animate-float-slow"
                         />
-                        {/* Advanced Blend Masking */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#5b96c9] via-transparent to-transparent md:hidden" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#5b96c9] hidden md:block" />
+                        {/* Perfect Blend Masking for the new blue tone */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#87b9e0] via-transparent to-transparent md:hidden" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#87b9e0] hidden md:block" />
                       </div>
 
                       <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12 lg:px-16 pt-4 pb-12 md:py-0 relative z-10">
-                         <div className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-black text-white uppercase tracking-[0.4em] mb-6 border border-white/20 shadow-xl">
-                            Premium Fabric Care
+                         <div className="bg-white/30 backdrop-blur-xl px-5 py-2 rounded-full text-[10px] font-black text-white uppercase tracking-[0.4em] mb-6 border border-white/20 shadow-2xl">
+                            Elite Hygiene Technology
                          </div>
-                         <h2 className="text-white text-[clamp(2rem,5vw,4rem)] font-black mb-6 leading-[0.9] tracking-tighter uppercase drop-shadow-2xl">
-                            The Ultimate <br className="hidden md:block" /> <span className="text-blue-100 italic">White Shine</span>
+                         <h2 className="text-white text-[clamp(2.2rem,6vw,4.5rem)] font-black mb-6 leading-[0.85] tracking-tighter uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+                            Pure <br className="hidden md:block" /> <span className="text-blue-50 italic">White Vision</span>
                          </h2>
-                         <p className="text-white/90 text-xs md:text-sm lg:text-base mb-8 max-w-md leading-relaxed font-bold uppercase tracking-wide">
-                            Engineered for brilliance. Experience deep-fiber cleaning that restores original brightness and preserves fabric softness.
+                         <p className="text-white/95 text-xs md:text-sm lg:text-base mb-8 max-w-md leading-relaxed font-black uppercase tracking-[0.1em]">
+                            Experience the future of laundry. Our advanced surfactant formula preserves every fiber while delivering a brilliant, pure white finish.
                          </p>
-                         <Link href="/products?category=Washing%20Powders" className="group relative inline-flex items-center gap-4 bg-white text-primary px-10 py-5 rounded-full overflow-hidden transition-all active:scale-95 shadow-[0_20px_40px_-10px_rgba(255,255,255,0.3)]">
-                            <span className="relative z-10 text-xs font-black uppercase tracking-widest">Explore Collection</span>
-                            <ChevronRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                         <Link href="/products?category=Washing%20Powders" className="group relative inline-flex items-center gap-4 bg-white text-primary px-12 py-6 rounded-full overflow-hidden transition-all active:scale-95 shadow-[0_30px_60px_-15px_rgba(255,255,255,0.4)]">
+                            <span className="relative z-10 text-xs font-black uppercase tracking-[0.2em]">Shop Collection</span>
+                            <ChevronRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                          </Link>
                       </div>
                    </div>
