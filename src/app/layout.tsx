@@ -54,12 +54,18 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
   icons: {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",
     apple: "/images/logo.png",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: 0,
 };
 
 export default function RootLayout({

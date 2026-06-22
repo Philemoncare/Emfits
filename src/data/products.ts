@@ -63,6 +63,15 @@ export const products: Product[] = [
     description: "Anti-microbial hand hygiene enriched with pure Aloe Vera extracts for soft, healthy hands.",
     keywords: ["phreshy", "hand", "wash", "soap", "aloe", "hygiene", "skin"]
   },
+  {
+    id: 8,
+    name: "Emfits Premium Oxford Shirt",
+    price: 250.0,
+    image: "/images/shirt.jpg",
+    category: "Apparel",
+    description: "Premium cotton Oxford shirt designed for comfort and style. The perfect 'fit' for the modern professional.",
+    keywords: ["emfits", "shirt", "clothing", "apparel", "oxford", "white shirt"]
+  },
 ];
 
 export const categories = [
@@ -70,4 +79,5 @@ export const categories = [
   { name: "Washing Powders", image: "/images/weo.png" },
   { name: "Surface Care", image: "/images/gallon.png" },
   { name: "Personal Hygiene", image: "/images/wesksd.jpg" },
+  { name: "Apparel", image: "/images/shirt.jpg" },
 ];

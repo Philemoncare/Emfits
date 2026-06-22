@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Tag } from "lucide-react";
+import { Calendar, Tag, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const posts = [
